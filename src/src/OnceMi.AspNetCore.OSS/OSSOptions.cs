@@ -6,29 +6,31 @@ namespace OnceMi.AspNetCore.OSS
     public enum OSSProvider
     {
         /// <summary>
-        /// ÎŞĞ§
+        /// æ— æ•ˆ
         /// </summary>
         Invalid = 0,
 
         /// <summary>
-        /// Minio×Ô½¨¶ÔÏó´¢´æ
+        /// Minioè‡ªå»ºå¯¹è±¡å‚¨å­˜
         /// </summary>
         Minio = 1,
 
         /// <summary>
-        /// °¢ÀïÔÆOSS
+        /// é˜¿é‡Œäº‘OSS
         /// </summary>
         Aliyun = 2,
 
         /// <summary>
-        /// ÌÚÑ¶ÔÆOSS
+        /// è…¾è®¯äº‘OSS
         /// </summary>
         QCloud = 3,
 
         /// <summary>
-        /// ÆßÅ£ÔÆ OSS
+        /// ä¸ƒç‰›äº‘ OSS
         /// </summary>
         Qiniu = 4,
+        
+        HaweiCloud = 5,
     }
 
     public class OSSOptions
@@ -67,7 +69,7 @@ namespace OnceMi.AspNetCore.OSS
         public bool IsEnableHttps { get; set; } = true;
 
         /// <summary>
-        /// ÊÇ·ñÆôÓÃRedis»º´æÁÙÊ±URL
+        /// æ˜¯å¦å¯ç”¨Redisç¼“å­˜ä¸´æ—¶URL
         /// </summary>
         public bool IsEnableCache { get; set; } = false;
     }

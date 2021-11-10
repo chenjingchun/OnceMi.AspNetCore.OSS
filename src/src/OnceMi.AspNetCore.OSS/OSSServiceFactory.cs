@@ -79,6 +79,10 @@ namespace OnceMi.AspNetCore.OSS
                         CosXml cosXml = new CosXmlServer(config, cosCredentialProvider);
                         return new QCloudOSSService(cosXml, _cache, options);
                     }
+                case OSSProvider.HaweiCloud:
+                    {
+                        return new HaweiOSSService(options);
+                    }
                 case OSSProvider.Qiniu:
                     {
                         return new QiniuOSSService(_cache, options);
