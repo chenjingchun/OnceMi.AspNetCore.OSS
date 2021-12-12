@@ -1,35 +1,38 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <Description>ASP.NET Core对象储存扩展。支持Minio自建对象储存，阿里云OSS，腾讯云COS。</Description>
-    <Company>OnceMi</Company>
-    <Authors>OnceMi</Authors>
-    <AssemblyVersion>1.0.8.0</AssemblyVersion>
-    <FileVersion>1.0.8.0</FileVersion>
-    <Version>1.0.8</Version>
+    <TargetFramework>net6.0</TargetFramework>
+    <Description>forked from oncemi/OnceMi.AspNetCore.OSS
+ASP.NET Core对象储存扩展。支持Minio自建对象储存，阿里云OSS，腾讯云COS，七牛云。</Description>
+    <Company></Company>
+    <Authors>oncemi,Jerry</Authors>
+    <AssemblyVersion>2.0.8.0</AssemblyVersion>
+    <FileVersion>2.0.8.0</FileVersion>
+    <Version>2.0.8</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <RepositoryUrl>https://github.com/oncemi/OnceMi.AspNetCore.OSS</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/oncemi/OnceMi.AspNetCore.OSS</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/chenjingchun/OnceMi.AspNetCore.OSS</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/chenjingchun/OnceMi.AspNetCore.OSS</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>修复错误：MinIO API responded with message=Access denied on the resource: ******/</PackageReleaseNotes>
+    <PackageReleaseNotes>升级.net6,升级引用的nuget包</PackageReleaseNotes>
+    <Product>$(AssemblyName)_NET6</Product>
+    <PackageId>$(AssemblyName)_NET6</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Aliyun.OSS.SDK.NetCore" Version="2.13.0" />
-    <PackageReference Include="Tencent.QCloud.Cos.Sdk" Version="5.4.23" />
+    <PackageReference Include="Tencent.QCloud.Cos.Sdk" Version="5.4.25" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
     <!--以下为Minio所需包-->
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Crc32.NET" Version="1.2.0" />
     <PackageReference Include="SourceLink.Embed.AllSourceFiles" Version="2.8.3" PrivateAssets="All" />
     <PackageReference Include="AsyncFixer" Version="1.5.1" PrivateAssets="All" />
-    <PackageReference Include="RestSharp" Version="106.12.0" />
+    <PackageReference Include="RestSharp" Version="106.15.0" />
     <PackageReference Include="System.Reactive.Linq" Version="5.0.0" />
   </ItemGroup>
 
